@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar but allow scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+#welcome_section {
+  position: relative;
+  height: 85vh;
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Blurred background layer */
+#welcome_section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('./assets/discussion_bg_img.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: blur(0px);   /* 🔥 blur here */
+  transform: scale(1); /* prevents edges from showing after blur */
+/* filter: blur(10px); */
+  z-index: 0;
+}
+
+/* Optional dark overlay (recommended) */
+#welcome_section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Content above everything */
+#welcome_section > * {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+
