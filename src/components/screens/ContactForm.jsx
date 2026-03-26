@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import { services } from "./Main";
+import { comapanyContactEmail, services } from "./Main";
+import { useNavigate } from "react-router-dom";
 
 
 export const ContactForm = () => {
+  const navigate=useNavigate()
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,7 +21,48 @@ export const ContactForm = () => {
     });
   };
 
+const handleSubmit = async (e) => {
+  e.preventDefault();
+setLoading(true);
+  try {
+    const response = await fetch(
+      `https://formsubmit.co/ajax/${comapanyContactEmail}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          _subject: "New Quote Request from VRGT Global Technology Website",
+        }),
+      }
+    );
 
+    const result = await response.json();
+
+    if (result.success) {
+      navigate('/form-success-view')
+
+      // reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        service: services?.[0] || "",
+        message: "",
+      });
+    } else {
+      alert("❌ Something went wrong. Try again.");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("❌ Network error");
+  }finally{
+    setLoading(false);
+  }
+};
   return (
     <div className="min-h-screen  flex justify-center px-4 py-10">
       <div className="w-full max-w-3xl">
@@ -28,10 +72,8 @@ export const ContactForm = () => {
           Request a quote
         </h1>
 
-        <form  action="https://formsubmit.co/gaddamsuneel143@gmail.com"
-          method="POST" 
+        <form  onSubmit={handleSubmit}
           className="space-y-4 bg-gray-200 p-4 rounded-lg">
-
           {/* Name */}
           <div>
             <label className="block text-sm mb-1">Your Name</label>
@@ -101,27 +143,29 @@ export const ContactForm = () => {
               onChange={handleChange}
             />
           </div>
- {/* ✅ Set Email Subject */}
+          {/* ✅ Set Email Subject */}
           <input
             type="hidden"
             name="_subject"
             value="New Quote Request from VRGT Global Technology Website"
           />
 
-          {/* ✅ Redirect to Home Page */}
-          <input
-            type="hidden"
-            name="_next"
-            value="http://localhost:3001/"
-          />
           {/* <input type="hidden" name="_captcha" value="true" /> */}
           {/* Submit */}
-          <button
-            type="submit"
-            className="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700 transition"
-          >
-            SUBMIT
-          </button>
+         <button
+  type="submit"
+  disabled={loading}
+  className="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700 transition flex items-center justify-center gap-2 disabled:opacity-70"
+>
+  {loading ? (
+    <>
+      <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+      Submitting...
+    </>
+  ) : (
+    "SUBMIT"
+  )}
+</button>
         </form>
       </div>
     </div>
