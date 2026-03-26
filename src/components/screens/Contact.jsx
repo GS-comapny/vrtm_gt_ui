@@ -5,7 +5,7 @@ import { FooterSection } from "./Home";
 export default function Contact(props) {
   return (
     <div className="font-sans text-gray-800 h-[85vh]">
-      <FadeInSection><ContactUsIntroPage /></FadeInSection>
+     <FadeInSection><ContactUsIntroPage /></FadeInSection> 
       <FadeInSection> <HeadOfficeAddress /></FadeInSection>
       <FadeInSection><BranchOfficeAddress /></FadeInSection>
       <FadeInSection><ContactForm /></FadeInSection>
@@ -24,7 +24,7 @@ const ContactUsIntroPage = () => {
           alt="about"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0"></div>
+        {/* <div className="absolute inset-0"></div> */}
       </div>
       <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
         <h1 className="text-white text-4xl font-bold">Contact Us</h1>

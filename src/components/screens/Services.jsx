@@ -1,7 +1,7 @@
 import { FadeInSection } from "../utils/FadeInSection";
 import { WhyChooseUs } from "./About";
 import { ContactSection, FooterSection } from "./Home";
-import { industriesWeServe, serviceCards } from "./Main";
+import { companyName, industriesWeServe, serviceCards } from "./Main";
 
 export default function Services(props) {
     
