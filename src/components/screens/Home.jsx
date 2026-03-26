@@ -8,6 +8,7 @@ import {
   comapanyContactNumber,
   companyName,
   industries,
+  industriesWeServe,
   navOptions,
   services,
   socialMediaIcons,
@@ -146,7 +147,7 @@ const OurServes = () => {
 
           {/* Grid */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {industries.map((item, index) => (
+            {industriesWeServe.map((item, index) => (
               <div
                 key={index}
                 className="p-6 cursor-pointer border rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:-translate-y-2 bg-gray-50"
@@ -202,7 +203,7 @@ export const FooterSection = () => {
                 <LogoSectionFooter />
               </div>
               <div>
-                {companyName} Empowering Your Business Through Technology
+                {companyName+""} Empowering Your Business Through Technology
               </div>
               <div>
                 <div className="flex gap-4 w-full justify-center items-bottom ">
@@ -253,7 +254,63 @@ export const FooterSection = () => {
             </div>
             <div className="flex flex-col gap-2">
               <h1 className="text-[24px] font-bold">Business</h1>
-              <div className="flex flex-col gap-2">
+             <HeadOfficeAddress />
+            </div>
+          </div>
+
+          {/* Copyright */}
+
+          <div className="text-center  w-full text-gray-400 font-semibold text-sm">
+            <hr />
+            <div className="p-2">
+              © {new Date().getFullYear()}
+              {" " + companyName}
+            </div>
+          </div>
+        </footer>
+      </FadeInSection>
+    </section>
+  );
+};
+
+
+const HeadOfficeAddress=()=>{
+  return(
+ <>
+   <div className="flex flex-col">
+        <h4 className="font-semibold text-lg mb-2">Address</h4>
+        <p>
+          D No.9, 2nd Floor, Tiruchanoor Rd, Beside Rahul Convention Center,
+          Yogimallavaram
+        </p>
+        <p>Tirupati, Andhra Pradesh – 517503</p>
+      </div>
+      <div className="flex flex-col">
+        <h4 className="font-semibold text-lg mb-2">Email</h4>
+        <a
+          href="mailto:info@vrglobaltechnology.com"
+          className="hover:text-blue-400 transition"
+        >
+          info@vrglobaltechnology.com
+        </a>
+      </div>
+
+      {/* Phone */}
+      <div className="flex flex-col">
+        <h4 className="font-semibold text-lg mb-2">Phone</h4>
+        <a
+          href="tel:+919989893225"
+          className="hover:text-blue-400 transition"
+        >
+          +91 99898 93225
+        </a>
+      </div>
+ </>
+  )
+}
+const BranchOfficeAddress=()=>{
+  return(
+    <div className="flex flex-col gap-2">
                 <div className="flex flex-col">
                   <h4 className="font-semibold text-lg mb-2">Address</h4>
                   <p>
@@ -285,20 +342,5 @@ export const FooterSection = () => {
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Copyright */}
-
-          <div className="text-center  w-full text-gray-400 font-semibold text-sm">
-            <hr />
-            <div className="p-2">
-              © {new Date().getFullYear()}
-              {" " + companyName}
-            </div>
-          </div>
-        </footer>
-      </FadeInSection>
-    </section>
-  );
-};
+  )
+}

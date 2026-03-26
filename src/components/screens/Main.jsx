@@ -40,7 +40,7 @@ export default function Main() {
     </div>
   );
 }
-export const companyName="VRGT Global Technology"
+export const companyName="VRTM Global Technology"
 export const comapanyContactNumber="99898 93225"
 export const comapanyContactEmail="info@vrglobaltechnology.com"
 export const navOptions = [
@@ -59,44 +59,44 @@ export const businessOptions=[
 
 export const services = [ "Website Design", "Web Development", "E-commerce Solutions", "UI/UX Design", "Software Development", "Mobile App Development", "Digital Marketing", "IT Infrastructure & Support", "Cloud Services", "Cybersecurity Solutions", "IT Consulting & Managed Services", "Graphic Designing" ]; 
  
-export const industries = [
-    {
-      title: "Food & Restaurants",
-      desc: "vrtm global Technology revolutionizes your restaurant with a smooth ordering system that delights your customers from click to delivery.",
-    },
-    {
-      title: "Tourism",
-      desc: "vrtm global Technology inspires wanderlust with a travel platform that makes bookings easy and experiences unforgettable.",
-    },
-    {
-      title: "Automobile",
-      desc: "vrtm global Technology drives your automotive business forward with a smart, easy-to-navigate platform that brings buyers and dealers together.",
-    },
-    {
-      title: "Real Estate",
-      desc: "vrtm global Technology empowers your real estate business with an intuitive platform that connects buyers and sellers effortlessly.",
-    },
-    {
-      title: "Online Shopping",
-      desc: "vrtm global Technology elevates your E-Store experience with a user-friendly platform that drives sales and customer satisfaction.",
-    },
-    {
-      title: "Events",
-      desc: "vrtm global Technology simplifies event planning with a seamless platform that ensures memorable experiences for organizers and attendees.",
-    },
-    {
-      title: "Banking & Finance",
-      desc: "vrtm global Technology transforms your financial services with a secure, user-friendly platform that builds trust and enhances customer experience.",
-    },
-    {
-      title: "Health & Fitness",
-      desc: "vrtm global Technology grows your fitness business with a digital platform that keeps your clients engaged and committed.",
-    },
-    {
-      title: "E-Commerce",
-      desc: "Grow your business with vrtm global Technology—an easy-to-use e-commerce platform that keeps your customers happy.",
-    },
-  ];
+// export const industries = [
+//     {
+//       title: "Food & Restaurants",
+//       desc: `vrtm global Technology revolutionizes your restaurant with a smooth ordering system that delights your customers from click to delivery.`,
+//     },
+//     {
+//       title: "Tourism",
+//       desc: "vrtm global Technology inspires wanderlust with a travel platform that makes bookings easy and experiences unforgettable.",
+//     },
+//     {
+//       title: "Automobile",
+//       desc: "vrtm global Technology drives your automotive business forward with a smart, easy-to-navigate platform that brings buyers and dealers together.",
+//     },
+//     {
+//       title: "Real Estate",
+//       desc: "vrtm global Technology empowers your real estate business with an intuitive platform that connects buyers and sellers effortlessly.",
+//     },
+//     {
+//       title: "Online Shopping",
+//       desc: "vrtm global Technology elevates your E-Store experience with a user-friendly platform that drives sales and customer satisfaction.",
+//     },
+//     {
+//       title: "Events",
+//       desc: "vrtm global Technology simplifies event planning with a seamless platform that ensures memorable experiences for organizers and attendees.",
+//     },
+//     {
+//       title: "Banking & Finance",
+//       desc: "vrtm global Technology transforms your financial services with a secure, user-friendly platform that builds trust and enhances customer experience.",
+//     },
+//     {
+//       title: "Health & Fitness",
+//       desc: "vrtm global Technology grows your fitness business with a digital platform that keeps your clients engaged and committed.",
+//     },
+//     {
+//       title: "E-Commerce",
+//       desc: "Grow your business with vrtm global Technology—an easy-to-use e-commerce platform that keeps your customers happy.",
+//     },
+//   ];
   export const socialMediaIcons = [
     { icon: <FaFacebookF />, link: "https://vrglobaltechnology.com/" },
     { icon: <FaTwitter />, link: "https://vrglobaltechnology.com/" },
@@ -172,13 +172,13 @@ export const serviceCards = [
   {icon:<FaProjectDiagram  />, title: "Graphic Designing", desc: "We create impactful visual content to communicate your brand’s message effectively. From designing logos to crafting eye-catching posters and more." },
 ];
 export const industriesWeServe = [
-  {title: "FOOD & RESTAURANTS", desc: `${companyName}  Revolutionize your restaurant with a smooth ordering system that delights your customers from click to delivery.`},
-  {title: "TOURISM", desc: `${companyName} Inspire wanderlust with a travel platform that makes bookings easy and experiences unforgettable.`},
-  { title: "AUTOMOBILE",desc: `${companyName} Drive your automotive business forward with a smart, easy-to-navigate platform that brings buyers and dealers together.`},
-  { title: "REAL ESTATE", desc: `${companyName} Empower your real estate business with an intuitive platform that connects buyers and sellers effortlessly.`},
-  {title: "ONLINE SHOPPING", desc: `${companyName} Elevate your E-Store experience with a user-friendly platform that drives sales and customer satisfaction.`},
-  {title: "EVENTS", desc: `${companyName} Simplify event planning with a seamless platform that ensures memorable experiences for organizers and attendees.`},
-  {title: "BANKING & FINANCE", desc: `${companyName} Transform your financial services with a secure, user-friendly platform that builds trust and enhances customer experience.`},
-  {title: "HEALTH & FITNESS", desc: `${companyName} Grow your fitness business with a digital platform that keeps your clients engaged and committed.`},
+  {title: "FOOD & RESTAURANTS", desc: `${companyName+" Pvt Ltd"}  Revolutionize your restaurant with a smooth ordering system that delights your customers from click to delivery.`},
+  {title: "TOURISM", desc: `${companyName+" Pvt Ltd" } Inspire wanderlust with a travel platform that makes bookings easy and experiences unforgettable.`},
+  { title: "AUTOMOBILE",desc: `${companyName+" Pvt Ltd"} Drive your automotive business forward with a smart, easy-to-navigate platform that brings buyers and dealers together.`},
+  { title: "REAL ESTATE", desc: `${companyName+" Pvt Ltd"} Empower your real estate business with an intuitive platform that connects buyers and sellers effortlessly.`},
+  {title: "ONLINE SHOPPING", desc: `${companyName+" Pvt Ltd"} Elevate your E-Store experience with a user-friendly platform that drives sales and customer satisfaction.`},
+  {title: "EVENTS", desc: `${companyName+" Pvt Ltd"} Simplify event planning with a seamless platform that ensures memorable experiences for organizers and attendees.`},
+  {title: "BANKING & FINANCE", desc: `${companyName+" Pvt Ltd"} Transform your financial services with a secure, user-friendly platform that builds trust and enhances customer experience.`},
+  {title: "HEALTH & FITNESS", desc: `${companyName+" Pvt Ltd"} Grow your fitness business with a digital platform that keeps your clients engaged and committed.`},
    {title: "E-COMMERCE", desc: `Grow your business with Nioyan IT Solutions—an easy-to-use e-commerce platform that keeps your customers happy.`},
 ];
